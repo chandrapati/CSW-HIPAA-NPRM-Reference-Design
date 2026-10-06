@@ -53,7 +53,7 @@ Cisco Secure Workload (CSW) is a **workload protection platform**. A lightweight
 
 **Console areas:** Investigate (inventory, flows, vulns) · Defend/Segmentation (policy) · Manage (agents) · Platform (connectors) · Administration (audit log)
 
-**Read next:** [Compliance evidence playbook](https://github.com/chandrapati/CSW-Compliance-Mapping/blob/main/docs/compliance-evidence-playbook.md) (full step-by-step) · [About CSW](https://github.com/chandrapati/CSW-Compliance-Mapping/blob/main/docs/about-csw.md) (platform intro)
+**Read next:** [Compliance evidence playbook](https://github.com/chandrapati/CSW-Compliance-Reference-Designs/blob/main/docs/compliance-evidence-playbook.md) (full step-by-step) · [About CSW](https://github.com/chandrapati/CSW-Compliance-Reference-Designs/blob/main/docs/about-csw.md) (platform intro)
 
 ---
 
@@ -135,14 +135,14 @@ Use this table with your compliance and privacy counsel; citations follow **prop
 
 For controls that **do not change** materially in the NPRM, the detailed phased guidance in the **current-rule runbook** remains authoritative for CSW deployment patterns:
 
-**Primary cross-reference:** [`../HIPAA/CSW-HIPAA-Technical-Runbook.md`](https://github.com/chandrapati/CSW-Compliance-Mapping/blob/main/HIPAA/CSW-HIPAA-Technical-Runbook.md)
+**Primary cross-reference:** [`../HIPAA/CSW-HIPAA-Technical-Runbook.md`](https://github.com/chandrapati/CSW-Compliance-Reference-Designs/blob/main/HIPAA/CSW-HIPAA-Technical-Runbook.md)
 
 | NPRM topic | CSW focus **this** document | Deeper procedural detail |
 |---|---|---|
-| ePHI zone architecture, PHI labelling, ADM for clinical apps | §1–§5 overview + **segmentation headline** | [HIPAA runbook §4–§5](https://github.com/chandrapati/CSW-Compliance-Mapping/blob/main/HIPAA/CSW-HIPAA-Technical-Runbook.md) |
-| Policy workspace patterns (simulation → enforcement) | §6–§7 | [HIPAA runbook §6](https://github.com/chandrapati/CSW-Compliance-Mapping/blob/main/HIPAA/CSW-HIPAA-Technical-Runbook.md) |
-| Vulnerability management | §5–§6, §8 | [HIPAA runbook §8](https://github.com/chandrapati/CSW-Compliance-Mapping/blob/main/HIPAA/CSW-HIPAA-Technical-Runbook.md) |
-| Monitoring & forensic exports | §7–§10 | [HIPAA runbook §9–§10](https://github.com/chandrapati/CSW-Compliance-Mapping/blob/main/HIPAA/CSW-HIPAA-Technical-Runbook.md) |
+| ePHI zone architecture, PHI labelling, ADM for clinical apps | §1–§5 overview + **segmentation headline** | [HIPAA runbook §4–§5](https://github.com/chandrapati/CSW-Compliance-Reference-Designs/blob/main/HIPAA/CSW-HIPAA-Technical-Runbook.md) |
+| Policy workspace patterns (simulation → enforcement) | §6–§7 | [HIPAA runbook §6](https://github.com/chandrapati/CSW-Compliance-Reference-Designs/blob/main/HIPAA/CSW-HIPAA-Technical-Runbook.md) |
+| Vulnerability management | §5–§6, §8 | [HIPAA runbook §8](https://github.com/chandrapati/CSW-Compliance-Reference-Designs/blob/main/HIPAA/CSW-HIPAA-Technical-Runbook.md) |
+| Monitoring & forensic exports | §7–§10 | [HIPAA runbook §9–§10](https://github.com/chandrapati/CSW-Compliance-Reference-Designs/blob/main/HIPAA/CSW-HIPAA-Technical-Runbook.md) |
 
 **Practice:** Treat the **HIPAA runbook** as the **implementation backbone**; treat **this NPRM runbook** as the **delta tracker + evidence adjustments** (especially **segmentation**, **24-month logs**, **inventory**, **vuln programme**).
 
@@ -271,7 +271,7 @@ Where CSW integrates directory / workload identity:
 - Restrict **which identities / device classes** may initiate flows **into** PHI-Zone
 - Tie **break-glass** and **emergency access** subnets to **time-bound** allow rules with **alerting**
 
-*(See [HIPAA runbook §6](https://github.com/chandrapati/CSW-Compliance-Mapping/blob/main/HIPAA/CSW-HIPAA-Technical-Runbook.md) for concrete allowlist templates.)*
+*(See [HIPAA runbook §6](https://github.com/chandrapati/CSW-Compliance-Reference-Designs/blob/main/HIPAA/CSW-HIPAA-Technical-Runbook.md) for concrete allowlist templates.)*
 
 ### 6.3 Encryption (at rest & in transit) — plaintext visibility & blocking
 
@@ -391,7 +391,7 @@ mkdir -p "${EVIDENCE_ROOT}"
 
 ### 10.4 **Current rule** evidence cadence
 
-Continue **existing** quarterly practices from [`../HIPAA/CSW-HIPAA-Technical-Runbook.md` §10](https://github.com/chandrapati/CSW-Compliance-Mapping/blob/main/HIPAA/CSW-HIPAA-Technical-Runbook.md) until the NPRM is **final** and **effective**; **add** the artefacts above where the **proposed** rule creates **new auditable expectations**.
+Continue **existing** quarterly practices from [`../HIPAA/CSW-HIPAA-Technical-Runbook.md` §10](https://github.com/chandrapati/CSW-Compliance-Reference-Designs/blob/main/HIPAA/CSW-HIPAA-Technical-Runbook.md) until the NPRM is **final** and **effective**; **add** the artefacts above where the **proposed** rule creates **new auditable expectations**.
 
 ---
 
@@ -409,10 +409,10 @@ Continue **existing** quarterly practices from [`../HIPAA/CSW-HIPAA-Technical-Ru
 
 ## Related frameworks
 
-- **Current HIPAA Security Rule (CSW):** [`../HIPAA/CSW-HIPAA-Technical-Runbook.md`](https://github.com/chandrapati/CSW-Compliance-Mapping/blob/main/HIPAA/CSW-HIPAA-Technical-Runbook.md)
-- [HITRUST CSF](https://github.com/chandrapati/CSW-Compliance-Mapping/blob/main/HITRUST-CSF/CSW-HITRUST-Technical-Runbook.md) — common healthcare vehicle **mapped to HIPAA**
-- [NIST SP 800-53](https://github.com/chandrapati/CSW-Compliance-Mapping/blob/main/NIST-800-53/CSW-NIST-800-53-Technical-Runbook.md) — control depth for **hybrid** programmes
-- [NIST SP 800-207](https://github.com/chandrapati/CSW-Compliance-Mapping/blob/main/NIST-800-207/CSW-NIST-800-207-Technical-Runbook.md) — zero-trust patterns under **segmentation**
+- **Current HIPAA Security Rule (CSW):** [`../HIPAA/CSW-HIPAA-Technical-Runbook.md`](https://github.com/chandrapati/CSW-Compliance-Reference-Designs/blob/main/HIPAA/CSW-HIPAA-Technical-Runbook.md)
+- [HITRUST CSF](https://github.com/chandrapati/CSW-Compliance-Reference-Designs/blob/main/HITRUST-CSF/CSW-HITRUST-Technical-Runbook.md) — common healthcare vehicle **mapped to HIPAA**
+- [NIST SP 800-53](https://github.com/chandrapati/CSW-Compliance-Reference-Designs/blob/main/NIST-800-53/CSW-NIST-800-53-Technical-Runbook.md) — control depth for **hybrid** programmes
+- [NIST SP 800-207](https://github.com/chandrapati/CSW-Compliance-Reference-Designs/blob/main/NIST-800-207/CSW-NIST-800-207-Technical-Runbook.md) — zero-trust patterns under **segmentation**
 
 ---
 
@@ -463,4 +463,4 @@ rulesets:
 
 ---
 
-*Part of the Cisco Secure Workload compliance reference-design series. Umbrella index: [CSW-Compliance-Mapping](https://github.com/chandrapati/CSW-Compliance-Mapping).*
+*Part of the Cisco Secure Workload compliance reference-design series. Umbrella index: [CSW-Compliance-Mapping](https://github.com/chandrapati/CSW-Compliance-Reference-Designs).*
